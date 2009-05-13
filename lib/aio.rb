@@ -154,7 +154,7 @@ module AIO
         if a =~ /:/
           @_external_encoding, @_internal_encoding = a.split(/:/).map {|e| Encoding._load e }
         else
-          @_external_encoding = Encoding._load e
+          @_external_encoding = Encoding._load a
           @_internal_encoding = nil
         end
       end
